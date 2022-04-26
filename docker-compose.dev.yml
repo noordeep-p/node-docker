@@ -11,3 +11,9 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
+  mongodb:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=1password
+    volumes:
+      - mongo-db:/data/db
